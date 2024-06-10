@@ -26,11 +26,11 @@ function updateTime(){
     
     let hora = tempo.getHours();
     let minuto = tempo.getMinutes();
-    let segundos = tempo.getSeconds();
+    let segundos = tempo.getSeconds().toString().padStart(2, '0');
 
     
 
-    /****** */
+    /*************/
     spanDia.textContent = dia;
     spanMes.textContent = mes;
     spanAno.textContent = ano;
@@ -44,6 +44,6 @@ function updateTime(){
 }
 
 function initTime(){
-    setInterval(updateTime,1000);
+    setInterval(updateTime,100);
 
 }
